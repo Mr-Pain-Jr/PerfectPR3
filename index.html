@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Kamalet</title>
+</head>
+
+<body>
+    <div class="wrapper">
+       
+       
+        <header class="header">
+            <img src="logo.png">
+            <h1>Hello, Serge</h1>
+        </header>
+        
+        
+        
+        
+        <div class="task">
+            <div class="item_links">
+                <a href="#item-1" class="link " onclick="give(event, 'item-1')">
+                    <p>Item 1</p>
+                </a>
+                <a href="#item-2" class="link" onclick="give(event, 'item-2')">
+                    <p>Item 2</p>
+                </a>
+                <a href="#item-3" class="link" onclick="give(event, 'item-3')">
+                    <p>Item 3</p>
+                </a>
+                <a href="#item-4" class="link" onclick="give(event, 'item-4')">
+                    <p>Item 4</p>
+                </a>
+                <a href="#item-5" class="link" onclick="give(event, 'item-5')">
+                    <p>Item 5</p>
+                </a>
+                <a href="#item-6" class="link" onclick="give(event, 'item-6')">
+                    <p>Item 6</p>
+                </a>
+            </div>
+            
+            
+            <section class="content">
+                <div id="item-1" class="item">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatum accusantium aperiam, eos rerum ullam, ducimus deserunt reprehenderit nesciunt blanditiis autem commodi laboriosam architecto, id vero facere fuga itaque velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eligendi, veniam! Minima placeat, adipisci est earum beatae illo sint nobis fugit nesciunt, dolorum cupiditate tenetur, iusto saepe, id error explicabo?
+                </div>
+                <div id="item-2" class="item">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aliquid reprehenderit dicta. Porro, error! Impedit libero nihil adipisci magni, saepe laudantium officiis enim? Debitis rerum earum impedit ipsa necessitatibus officia! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas laborum quod molestiae ducimus, aspernatur eum mollitia. Perferendis molestiae iste, aliquid consectetur modi temporibus, reprehenderit nam. Eius provident ea aut aspernatur.
+                </div>
+                <div id="item-3" class="item">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ex quas earum exercitationem recusandae laudantium sapiente neque, itaque nihil voluptas, quia quos, fugiat repellendus deserunt! Neque et nulla assumenda officia?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam rem molestias perspiciatis, esse a quisquam quaerat voluptate atque non veniam, qui natus facere, laborum eius. Hic debitis consectetur, dolorem nulla?
+                </div>
+                <div id="item-4" class="item">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque possimus culpa mollitia, ullam magnam ea provident commodi autem. Deserunt, possimus a et earum dolor esse aut magni magnam soluta doloremque? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aliquam quam consectetur accusamus a debitis laborum excepturi, repellat, explicabo ut repellendus, voluptas ea facere dolor eos atque ipsam perspiciatis placeat!
+                </div>
+                <div id="item-5" class="item">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, recusandae nemo accusantium assumenda nesciunt ad. Nobis ullam dolorem odit ratione delectus eaque beatae. Veniam blanditiis fuga, repellendus corporis ut vitae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni ullam numquam molestias natus accusantium suscipit, aperiam, perferendis dicta quo odit neque! Cumque nostrum nobis porro eveniet obcaecati voluptate aliquam nisi?
+                </div>
+                <div id="item-6" class="item">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas est in tempora placeat nihil natus nesciunt odio numquam recusandae consequatur quasi sed doloremque animi, laborum iure illo dicta debitis iusto? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum explicabo, odio quod. Ducimus facilis ut ab aspernatur, id repellendus deleniti voluptatem, fugiat natus harum dignissimos consequatur voluptatum modi necessitatibus deserunt?
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    
+    
+    
+    <script>
+        function give(evt, item) {
+            let i, items, itemlinks;
+                items = document.getElementsByClassName("item");
+            
+            for (i = 0; i < items.length; i++) {
+                
+                items[i].style.display = "none";
+                
+            }
+            
+            itemlinks = document.getElementsByClassName("link");
+            
+                for (i = 0; i < itemlinks.length; i++) {
+                    
+                itemlinks[i].className = itemlinks[i].className.replace(" work", "");
+                    
+                }
+            
+            document.getElementById(item).style.display = "block";
+            
+            evt.currentTarget.className += " work ";
+            
+            evt.currentTarget.classList.add(" work ");
+        }
+    </script>
+    
+    
+    
+</body>
+
+</html>
